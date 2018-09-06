@@ -34,7 +34,20 @@ public class LatinSquareTest {
 		LatinSquare ls = new LatinSquare(myArray);
 		int[] expect = {3,1,2};
 		assertArrayEquals(ls.getColumn(2),expect);
-		
+	}
+	@Test
+	public void GetLatinSquare() {
+		int[][] myArray = {{1,2,3},{2,3,1},{3,1,2}};
+		int[][] myArray2 = {{1,2,4},{2,3,1},{3,1,2}};
+		LatinSquare ls = new LatinSquare(myArray);
+		assertArrayEquals(ls.getLatinSquare(),myArray);
+	}
+	@Test
+	public void GetRow() {
+		int[][] myArray = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare ls = new LatinSquare(myArray);
+		int[] expect = {1,2,3};
+		assertArrayEquals(ls.getRow(0),expect);
 	}
 
 }

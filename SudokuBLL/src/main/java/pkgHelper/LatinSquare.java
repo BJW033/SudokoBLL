@@ -33,7 +33,12 @@ public class LatinSquare {
 		}
 		return col;
 	}
-
+	public int[][] getLatinSquare(){
+		return myLatinSquare;
+	}
+	public int[] getRow(int iRow) {
+		return myLatinSquare[iRow];
+	}
+	}
 
 	
-}
